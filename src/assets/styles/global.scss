@@ -1,0 +1,11 @@
+@import './variables';
+
+body {
+    font: normal 16px/25px 'Montserrat' , Arial, "sans-serif";
+    color: #151515;
+    font-weight: 500;
+}
+hr:not([size]){
+    height: 2px;
+    background-color: #cdcdcd;
+}
