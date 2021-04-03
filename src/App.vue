@@ -118,6 +118,55 @@
             </div>
           </div>
         </div>
+        <h2 class="fs-7 h2 fw-bold mb-4"> Как мы работаем ?</h2>
+        <div class="row work mb-5">
+          <div class="col col-12 col-lg-8 mb-4">
+            <div class="work__item px-4 py-4 px-md-5 py-md-5">
+              <div class="work__item-name fw-bold mb-3">1. Сформулируйте задачу</div>
+              <p class="work__item-text mb-0">Чем точнее вы сможете описать нужный результат, тем проще вам будет найти исполнителя.</p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
+            <div class="work__item  work__item_ext  px-5 py-5">
+                <div class="work__item-name fw-bold mb-3">
+                  <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+                <p class="work__item-text mb-0">Подбираем для вас команду</p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-8 mb-4">
+            <div class="work__item  px-4 py-4 px-md-5 py-md-5">
+              <div class="work__item-name fw-bold mb-3">2. Сформулируйте задачу</div>
+              <p class="work__item-text mb-0">Чем точнее вы сможете описать нужный результат, тем проще вам будет найти исполнителя.</p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
+            <div class="work__item   work__item_ext  px-5 py-5">
+                <div class="work__item-name fw-bold mb-3">
+                  <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+                <p class="work__item-text mb-0">Подбираем для вас команду</p>
+            </div>
+          </div>
+           <div class="col col-12 col-lg-8 mb-4">
+            <div class="work__item  px-4 py-4 px-md-5 py-md-5">
+              <div class="work__item-name fw-bold mb-3">3. Сформулируйте задачу</div>
+              <p class="work__item-text mb-0">Чем точнее вы сможете описать нужный результат, тем проще вам будет найти исполнителя.</p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
+            <div class="work__item   work__item_ext  px-5 py-5">
+                <div class="work__item-name fw-bold mb-3">
+                  <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+                <p class="work__item-text mb-0">Подбираем для вас команду</p>
+            </div>
+          </div>
+          
+        </div>
+        <h2 class="fs-7 h2 fw-bold mb-4">Более >100 специалистов </h2>
+        <!-- <div class="worker">
+          <div class="worker__wrap">
+            <div class="worker__item" v-for="item in 50" :key="item"></div>
+          </div>
+        </div> -->
         <!-- <span class="main__footer ">
           <h1 class=" mb-5 d-block">Последние решения </h1>
           <swiper :slides-per-view="4" :space-between="15">
@@ -509,6 +558,91 @@
   @keyframes scroll {
     to {
       transform: translateY(-2590px)
+    }
+  }
+  @keyframes scrollX {
+    to {
+      transform: translateX(-2590px)
+    }
+  }
+  .work{
+   
+    &__item{
+      background: #f0f6fa;
+      border-radius: 35px;
+      height: 100%;
+      &_ext{
+        .work__item-name{
+          position: relative;
+          span{
+            position: relative;
+            z-index: 1;
+          }
+          &::after{
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: -4px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(0 86 249 / 51%);
+          }
+        }
+      }
+    }
+  }
+  .worker{
+    height: 58px;
+     overflow: hidden;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      right: -1px;
+      bottom: 0;
+      top: 0;
+      width: 60px;
+      z-index: 1;
+      background: linear-gradient(
+  180deg
+  , rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
+      transform: rotate(
+-90deg
+);
+    }
+&::before{
+      content: '';
+      position: absolute;
+      left: -1px;
+      bottom: -0;
+      top: 0;
+      width: 60px;
+      z-index: 1;
+      background: linear-gradient(
+  180deg
+  , rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
+      transform: rotate(
+90deg
+);
+    }
+    &__wrap{
+      display: flex;
+      flex-grow: 1;
+      align-self: flex-start;
+      position: absolute;
+      animation: scrollX 180s linear .4s infinite;
+
+    }
+    &__item{
+      border-radius: 50%;
+      width: 58px;
+      height: 58px;
+      background: #0056f9;
+      margin-right: 20px;
+      &:last-child{
+        margin-right:0 ;
+      }
     }
   }
 </style>
