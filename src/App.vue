@@ -5,7 +5,7 @@
         <BaseHeader />
         <hr class="d-block d-md-none mb-0">
       </div>
-      <div class="col offset-xl-1 col-12   col-md-10">
+      <div class="col offset-xl-1 col-12   col-md-10 mb-5">
         <div class="main d-flex  flex-column py-0 py-md-4 justify-content-between">
           <div class="main__header">
             <div class="pr-4 d-block d-md-flex justify-content-between align-items-center">
@@ -25,15 +25,15 @@
               <div class="col col-12 col-md-12 col-lg-6">
                 <div class="message">
                   <div class="message__item  mb-3 ">
-                    <div class="message__msg p-3 d-inline-block">Есть задача!</div>
+                    <div class="message__msg p-3 d-inline-block">Нужна помощь.</div>
                   </div>
                   <div class="message__item  mb-3">
-                    <div class="message__msg p-3 d-inline-block">Решим!</div>
+                    <div class="message__msg p-3 d-inline-block">Давайте обсудим</div>
                   </div>
 
                   <div class="message__item  mb-3">
-                    <div class="message__msg p-3 d-inline-block">Нужно сделать <b>
-                        <vue-typer :text='["Нарисовать Баннер","Настроить сервер" , "Разработать Сайт"]'
+                    <div class="message__msg p-3 d-inline-block">Нужно <b>
+                        <vue-typer :text='["Нарисовать Баннер","Настроить сервер" , "Разработать продукт"]'
                           :pre-erase-delay='300' :type-delay='100' erase-style='clear' caret-animation='expand'>
                         </vue-typer>
                       </b></div>
@@ -53,10 +53,8 @@
 
             </div>
             <h1 class="fs-7 d-none d-md-block">IT аутсорс для малого и среднего бизнеса</h1>
-            <p class="text-secondary d-none d-md-block mb-0 fs-5 lh-lg w-75">Не важно нужно создать баннер,
-              корпоративный сайт или
-              маркеплейс.
-              Обширный штат сотрудников и гибкие метадологие управления.</p>
+            <p class="text-secondary d-none d-md-block mb-0 fs-5 lh-base w-75">Сделаем продукт с нуля, доработаем
+              текущий проект или усилим вашу ИТ-команду лучшими разработчиками на рынке.</p>
           </div>
           <span></span>
         </div>
@@ -68,7 +66,7 @@
             <div class="row h-100">
               <div class="col col-4 d-none d-lg-block">
                 <div class="d-flex align-items-center h-100">
-                <h2 class="fs-7 h2 fw-bold mb-0 "> Работаем<br />без остановок</h2>
+                  <h2 class="fs-7 h2 fw-bold mb-0 "> Работаем<br />без остановок</h2>
                 </div>
               </div>
               <div class="col col-lg-8">
@@ -78,12 +76,24 @@
                       <div class="orders__icon">
                         <Icon :name="item.icon" size="m" fill="#fff" />
                       </div>
+
                       <div class="orders__name">
                         {{item.name}}
                       </div>
-                      <div class="orders__date text-muted">Сделали<br>
-                        {{item.date}}
-                        назад</div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <!-- <div class="orders__date text-muted">
+                          {{item.date}}
+                        </div> -->
+                        <div class="orders__badge">
+                          <div class="badge" v-if="item.badge" :style="{
+                          background: item.badge.color
+                        }">
+                            {{item.badge.text}}
+                          </div>
+                        </div>
+                      </div>
+
+
                     </div>
                   </div>
                   <div class="orders__col">
@@ -94,9 +104,19 @@
                       <div class="orders__name">
                         {{item.name}}
                       </div>
-                      <div class="orders__date text-muted">Сделали<br>
-                        {{item.date}}
-                        назад</div>
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <!-- <div class="orders__date text-muted">
+                          {{item.date}}
+                        </div> -->
+                        <div class="orders__badge">
+                          <div class="badge" v-if="item.badge" :style="{
+                          background: item.badge.color
+                        }">
+                            {{item.badge.text}}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="orders__col d-none d-lg-block">
@@ -107,9 +127,19 @@
                       <div class="orders__name">
                         {{item.name}}
                       </div>
-                      <div class="orders__date text-muted">Сделали<br>
-                        {{item.date}}
-                        назад</div>
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <!-- <div class="orders__date text-muted">
+                          {{item.date}}
+                        </div> -->
+                        <div class="orders__badge">
+                          <div class="badge" v-if="item.badge" :style="{
+                          background: item.badge.color
+                        }">
+                            {{item.badge.text}}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -122,46 +152,183 @@
         <div class="row work mb-5">
           <div class="col col-12 col-lg-8 mb-4">
             <div class="work__item px-4 py-4 px-md-5 py-md-5">
-              <div class="work__item-name fw-bold mb-3">1. Сформулируйте задачу</div>
-              <p class="work__item-text mb-0">Чем точнее вы сможете описать нужный результат, тем проще вам будет найти исполнителя.</p>
+              <div class="work__item-name fw-bold mb-3">1. Уточняем детали</div>
+              <p class="work__item-text mb-0">Проведем встречу где узнаем всю информацию по задаче, дадим рекомендации и
+                сделаем предложение </p>
             </div>
           </div>
           <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
             <div class="work__item  work__item_ext  px-5 py-5">
-                <div class="work__item-name fw-bold mb-3">
-                  <span> <span class="text-white pe-2">EXT</span>.team</span></div>
-                <p class="work__item-text mb-0">Подбираем для вас команду</p>
+              <div class="work__item-name fw-bold mb-3">
+                <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+              <p class="work__item-text mb-0">Интерьвью</p>
             </div>
           </div>
           <div class="col col-12 col-lg-8 mb-4">
             <div class="work__item  px-4 py-4 px-md-5 py-md-5">
-              <div class="work__item-name fw-bold mb-3">2. Сформулируйте задачу</div>
-              <p class="work__item-text mb-0">Чем точнее вы сможете описать нужный результат, тем проще вам будет найти исполнителя.</p>
+              <div class="work__item-name fw-bold mb-3">2. Составляем план</div>
+              <p class="work__item-text mb-0">Уточняем технические детали и разбивем задачу на этапы. Согласовываем план
+                с заказчиком и отправляем на оценку разработчикам.
+
+              </p>
             </div>
           </div>
           <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
             <div class="work__item   work__item_ext  px-5 py-5">
-                <div class="work__item-name fw-bold mb-3">
-                  <span> <span class="text-white pe-2">EXT</span>.team</span></div>
-                <p class="work__item-text mb-0">Подбираем для вас команду</p>
+              <div class="work__item-name fw-bold mb-3">
+                <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+              <p class="work__item-text mb-0">Планирование</p>
             </div>
           </div>
-           <div class="col col-12 col-lg-8 mb-4">
+          <div class="col col-12 col-lg-8 mb-4">
             <div class="work__item  px-4 py-4 px-md-5 py-md-5">
-              <div class="work__item-name fw-bold mb-3">3. Сформулируйте задачу</div>
-              <p class="work__item-text mb-0">Чем точнее вы сможете описать нужный результат, тем проще вам будет найти исполнителя.</p>
+              <div class="work__item-name fw-bold mb-3">3. Подготовка</div>
+              <p class="work__item-text mb-0">Подбираем команду,обределяем оценку сроков и бюджета. Начинаем работу над
+                проектом..</p>
             </div>
           </div>
           <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
             <div class="work__item   work__item_ext  px-5 py-5">
-                <div class="work__item-name fw-bold mb-3">
-                  <span> <span class="text-white pe-2">EXT</span>.team</span></div>
-                <p class="work__item-text mb-0">Подбираем для вас команду</p>
+              <div class="work__item-name fw-bold mb-3">
+                <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+              <p class="work__item-text mb-0">Подготовка</p>
             </div>
           </div>
-          
+
+          <div class="col col-12 col-lg-8 mb-4">
+            <div class="work__item  px-4 py-4 px-md-5 py-md-5">
+              <div class="work__item-name fw-bold mb-3">4. Идет работа </div>
+              <p class="work__item-text mb-0">Каждый день проходят митинги с командой, тем самым мы контрилируем сроки и
+                качество работ. Каждая фича и этап согласовывается с клиентом. Клиент может участвовать в процессе
+                разработки (чаты, задачи и т.д.), а может доверить всю разработку нам.</p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
+            <div class="work__item   work__item_ext  px-5 py-5">
+              <div class="work__item-name fw-bold mb-3">
+                <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+              <p class="work__item-text mb-0">Разработка</p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-8 mb-4">
+            <div class="work__item  px-4 py-4 px-md-5 py-md-5">
+              <div class="work__item-name fw-bold mb-3">5. Завершение задачи </div>
+              <p class="work__item-text mb-0"> Сдаем задачу в срок </p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-4 mb-4 d-none d-lg-block">
+            <div class="work__item   work__item_ext  px-5 py-5">
+              <div class="work__item-name fw-bold mb-3">
+                <span> <span class="text-white pe-2">EXT</span>.team</span></div>
+              <p class="work__item-text mb-0">Итог</p>
+            </div>
+          </div>
+
         </div>
-        <h2 class="fs-7 h2 fw-bold mb-4">Более >100 специалистов </h2>
+        <h2 class="fs-7 h2 fw-bold mb-5"> Международная платформа для благотворительности Sirius</h2>
+        <h3 class="mb-4"> О проекте</h3>
+
+        <div class="row work">
+          <div class="col col-12 col-md-8">
+            <p>Сириус - проект наших партнеров в Италии, который развивается по модели b2b-маркетплейса для
+              благотворительных организаций. Бизнес в рамках своей корпоративной социальной ответственности поддерживает
+              разные благотворительные проекты и их инициаторов, при этом все платежи происходят внутри платформы.</p>
+            <p>Весь проект мы делаем под ключ с нуля. Начали с проектирования идеи, сделали первые прототипы, после чего
+              наши партнеры привлекли инвестиции под проект. На следующем этапе мы подготовили дизайн и начали делать
+              разработку двумя параллельными командами, чтобы уложиться к срокам релиза. Сейчас в команде также работает
+              выделенный менеджер продукта, который помогает нашим партнерам в развитии проекта.</p>
+            <h3 class="mb-4 mt-5"> Команда</h3>
+            <div class="theam-project row">
+              <div class="col col-12 col-md-6 mb-4 ">
+                <div class="theam-project__item d-flex align-items-center ">
+                  <div class="theam-project__image">
+                    <img
+                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                      alt="">
+                  </div>
+                  <div class="theam-project__body ms-3">
+                    <b class="">Александр</b>
+                    <div class="text-secondary fw-normal">senior product designer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 mb-4">
+                <div class="theam-project__item d-flex align-items-center ">
+                  <div class="theam-project__image">
+                    <img
+                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                      alt="">
+                  </div>
+                  <div class="theam-project__body ms-3">
+                    <b class="">Александр</b>
+                    <div class="text-secondary fw-normal">senior product designer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 ">
+                <div class="theam-project__item d-flex align-items-center ">
+                  <div class="theam-project__image">
+                    <img
+                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                      alt="">
+                  </div>
+                  <div class="theam-project__body ms-3">
+                    <b class="">Александр</b>
+                    <div class="text-secondary fw-normal">senior product designer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6">
+                <div class="theam-project__item d-flex align-items-center ">
+                  <div class="theam-project__image">
+                    <img
+                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                      alt="">
+                  </div>
+                  <div class="theam-project__body ms-3">
+                    <b class="">Александр</b>
+                    <div class="text-secondary fw-normal">senior product designer</div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="col col-12 col-md-4">
+            <div class="work__item work__item_height  px-4 py-5">
+              <div class="row mb-3">
+                <div class="col">
+                  <div class="text-secondary work__snippet fw-bold">ГОД</div>
+                  <p>2020</p>
+                </div>
+                <div class="col">
+                  <div class="text-secondary work__snippet fw-bold">ЧАСЫ</div>
+                  <p>1742</p>
+                </div>
+                <div class="col">
+                  <div class="text-secondary work__snippet fw-bold">ДЛИТЕЛЬНОСТЬ</div>
+                  <p>5 месяцев</p>
+                </div>
+              </div>
+
+              <div class=" btn btn-outline-primary me-2 mb-2">Маркетплейсы</div>
+              <div class=" btn btn-outline-primary me-2 mb-2">FinTech</div>
+              <div class="text-secondary work__snippet fw-bold mt-3">ТЕХНОЛОГИИ</div>
+              <span class=" text-primary">
+                node.js
+              </span>
+              <span class="mx-2"> &#8226;</span>
+              <span class="text-danger">react native </span>
+              <div class="text-secondary work__snippet fw-bold mt-3">Сайт</div>
+              <a href="https://bestgarden.ru/">Bestgarden</a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- <h2 class="fs-7 h2 fw-bold mb-4">Более >100 специалистов </h2> -->
         <!-- <div class="worker">
           <div class="worker__wrap">
             <div class="worker__item" v-for="item in 50" :key="item"></div>
@@ -245,111 +412,203 @@
       return {
         orders: [{
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Разработка UX/UI дизайна блока услуг на глав.странице и страницы услуг',
+            date: '5 мая, 8:32',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Разработать мультилендинг на WP',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Доработка сайта на опен карт 3, установка и настройка модулей',
+            date: '31 мин.',
+            badge: {
+              color: '#21C5FF',
+              text: 'Согласование'
+            }
+
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Создание приложения с функционалом как доставка "Самокат"',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Разработать сайт для продажи курса',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Поднять в docker MySQL и PHP',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Написать алгоритм, создающий картину в стиле стринг-арт',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           }, {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Парсинг/скрепинг продавцов с Покупки от Яндекс.Маркета',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Нужно сделать адаптив на фигме',
+            date: '31 мин.',
+            badge: {
+              color: '#21C5FF',
+              text: 'Согласование'
+            }
+
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Провести первичную оптимизацию сайта',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Нужно настроить выгрузку данных из JSON по URL в Google Data Studio',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Написать архитектуру фронтенда',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Установка и настройка модулей маркет плейса интернет магазина на ОПЕН КАРТ 3',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Адаптивная верстка сайта по готовому дизайнерскому макету',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Доработать фронт на React + Typescript',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Разработать интерфейс UI/UX для e-commerce',
+            date: '31 мин.',
+            badge: {
+              color: '#21C5FF',
+              text: 'Согласование'
+            }
+
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Отключить веб формы на сайте Битрикс',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Развернуть бекенд соц сети на vds сервере ubuntu',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           }, {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Доработка универсальной crud админки на quasar',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Доработка на сайте 1С.Битрикс. Поиск по штрихкоду',
+            date: '31 мин.',
+            badge: {
+              color: '#F14CAE',
+              text: 'В работе'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Создать простой оригинальный логотип',
+            date: '31 мин.',
+            badge: {
+              color: '#8CC152',
+              text: 'Готово'
+            }
           },
           {
             icon: 'news',
-            name: 'Бесплатная консультация юриста',
-            date: '31 мин.'
+            name: 'Vue мобильная верстка',
+            date: '31 мин.',
+            badge: {
+              color: '#21C5FF',
+              text: 'Согласование'
+            }
+
           }
         ]
       }
@@ -375,12 +634,38 @@
     display: block;
   }
 
+  .theam-project {
+    &__image {
+      width: 60px;
+      height: 60px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .badge {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 100px;
+    background-color: #ff5674;
+    color: #fff;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+
   .orders {
     height: 480px;
     overflow: hidden;
     position: relative;
     display: flex;
     border-radius: 35px;
+
+    &__badge {}
 
     &__date {
       font-size: 14px;
@@ -404,7 +689,7 @@
       display: flex;
       flex-grow: 1;
       align-self: flex-start;
-     
+
     }
 
     &__icon {
@@ -425,6 +710,8 @@
       flex-direction: column;
       padding: 20px;
       height: 235px;
+      position: relative;
+
       @media (max-width: 991.98px) {
         margin-bottom: 12px;
       }
@@ -437,12 +724,14 @@
       height: 60px;
       z-index: 1;
       background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, .5));
+
       &_top {
         top: 0;
         transform: rotate(180deg);
 
       }
-      &_bottom{
+
+      &_bottom {
         bottom: 0;
       }
     }
@@ -455,10 +744,13 @@
       overflow: hidden;
       transform: translateY(0);
       width: calc((100%/3) - 20px);
+
       animation: scroll 180s linear .4s infinite;
+
       @media (max-width: 991.98px) {
         width: calc((100%/2) - 6px);
       }
+
       &:first-child {
         left: 0;
       }
@@ -466,6 +758,7 @@
       &:nth-of-type(2) {
         left: calc(100%/3);
         margin-top: -120px;
+
         @media (max-width: 991.98px) {
           left: calc((100%/2) + 6px);
         }
@@ -560,25 +853,37 @@
       transform: translateY(-2590px)
     }
   }
+
   @keyframes scrollX {
     to {
       transform: translateX(-2590px)
     }
   }
-  .work{
-   
-    &__item{
+
+  .work {
+    &__snippet {
+      font-size: 10px;
+    }
+
+    &__item {
       background: #f0f6fa;
       border-radius: 35px;
       height: 100%;
-      &_ext{
-        .work__item-name{
+
+      &_height {
+        height: auto;
+      }
+
+      &_ext {
+        .work__item-name {
           position: relative;
-          span{
+
+          span {
             position: relative;
             z-index: 1;
           }
-          &::after{
+
+          &::after {
             content: "";
             position: absolute;
             top: -8px;
@@ -592,11 +897,13 @@
       }
     }
   }
-  .worker{
+
+  .worker {
     height: 58px;
-     overflow: hidden;
+    overflow: hidden;
     position: relative;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       right: -1px;
@@ -604,14 +911,11 @@
       top: 0;
       width: 60px;
       z-index: 1;
-      background: linear-gradient(
-  180deg
-  , rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
-      transform: rotate(
--90deg
-);
+      background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
+      transform: rotate(-90deg);
     }
-&::before{
+
+    &::before {
       content: '';
       position: absolute;
       left: -1px;
@@ -619,14 +923,11 @@
       top: 0;
       width: 60px;
       z-index: 1;
-      background: linear-gradient(
-  180deg
-  , rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
-      transform: rotate(
-90deg
-);
+      background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
+      transform: rotate(90deg);
     }
-    &__wrap{
+
+    &__wrap {
       display: flex;
       flex-grow: 1;
       align-self: flex-start;
@@ -634,14 +935,16 @@
       animation: scrollX 180s linear .4s infinite;
 
     }
-    &__item{
+
+    &__item {
       border-radius: 50%;
       width: 58px;
       height: 58px;
       background: #0056f9;
       margin-right: 20px;
-      &:last-child{
-        margin-right:0 ;
+
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
