@@ -1,44 +1,40 @@
 {
-  "name": "synergy",
-  "version": "0.1.0",
+  "name": "ext.team",
   "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+  "engines": {
+    "node": "22.x"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-typer": "^1.2.0",
-    "normalize.css": "^8.0.1",
-    "swiper": "^6.4.15"
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "upgrade": "nuxt upgrade --force"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "html-loader": "^0.5.5",
-    "sass": "^1.32.8",
-    "sass-loader": "^7.3.1",
-    "vue-template-compiler": "^2.6.11"
+    "@csstools/postcss-global-data": "^3",
+    "@nuxt/fonts": "^0",
+    "@nuxt/scripts": "^0",
+    "@pinia/nuxt": "^0",
+    "@types/node": "^20",
+    "@vuelidate/core": "^2",
+    "@vuelidate/validators": "^2",
+    "maska": "^3",
+    "nuxt": "^3.13",
+    "pinia": "^2",
+    "postcss": "^8",
+    "postcss-import": "^16",
+    "postcss-nested": "^6",
+    "postcss-preset-env": "^10",
+    "vue": "^3"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
+  "dependencies": {
+    "@vueuse/core": "^11",
+    "@vueuse/nuxt": "^11",
+    "normalize.css": "^8.0.1",
+    "nuxt-icons": "^3",
+    "vue3-typer": "^1.0.0"
   },
   "browserslist": [
     "> 1%",

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-    import Icon from '@/components/Icon/Icon'
+    import Icon from '~/components/Icon/Icon.vue'
  
     export default {
         name: 'app',
@@ -42,7 +42,7 @@
     };
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
     hr{
         width: 26px;
     }

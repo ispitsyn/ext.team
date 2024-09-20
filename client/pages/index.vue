@@ -1,3 +1,211 @@
+<script setup>
+import Typer from 'vue3-typer'
+import "vue3-typer/dist/vue-typer.css"
+
+const orders = [
+  {
+    icon: 'news',
+    name: 'Разработка UX/UI дизайна блока услуг на глав.странице и страницы услуг',
+    date: '5 мая, 8:32',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Разработать мультилендинг на WP',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Доработка сайта на опен карт 3, установка и настройка модулей',
+    date: '31 мин.',
+    badge: {
+      color: '#21C5FF',
+      text: 'Согласование'
+    }
+
+  },
+  {
+    icon: 'news',
+    name: 'Создание приложения с функционалом как доставка "Самокат"',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Разработать сайт для продажи курса',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Поднять в docker MySQL и PHP',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Написать алгоритм, создающий картину в стиле стринг-арт',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  }, {
+    icon: 'news',
+    name: 'Парсинг/скрепинг продавцов с Покупки от Яндекс.Маркета',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Нужно сделать адаптив на фигме',
+    date: '31 мин.',
+    badge: {
+      color: '#21C5FF',
+      text: 'Согласование'
+    }
+
+  },
+  {
+    icon: 'news',
+    name: 'Провести первичную оптимизацию сайта',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Нужно настроить выгрузку данных из JSON по URL в Google Data Studio',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Написать архитектуру фронтенда',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Установка и настройка модулей маркет плейса интернет магазина на ОПЕН КАРТ 3',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Адаптивная верстка сайта по готовому дизайнерскому макету',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Доработать фронт на React + Typescript',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Разработать интерфейс UI/UX для e-commerce',
+    date: '31 мин.',
+    badge: {
+      color: '#21C5FF',
+      text: 'Согласование'
+    }
+
+  },
+  {
+    icon: 'news',
+    name: 'Отключить веб формы на сайте Битрикс',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Развернуть бекенд соц сети на vds сервере ubuntu',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  }, {
+    icon: 'news',
+    name: 'Доработка универсальной crud админки на quasar',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Доработка на сайте 1С.Битрикс. Поиск по штрихкоду',
+    date: '31 мин.',
+    badge: {
+      color: '#F14CAE',
+      text: 'В работе'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Создать простой оригинальный логотип',
+    date: '31 мин.',
+    badge: {
+      color: '#8CC152',
+      text: 'Готово'
+    }
+  },
+  {
+    icon: 'news',
+    name: 'Vue мобильная верстка',
+    date: '31 мин.',
+    badge: {
+      color: '#21C5FF',
+      text: 'Согласование'
+    }
+
+  }
+]
+</script>
+
 <template>
   <div class="wrap container-fluid">
     <div class="row ">
@@ -33,20 +241,20 @@
 
                   <div class="message__item  mb-3">
                     <div class="message__msg p-3 d-inline-block">Нужно <b>
-                        <vue-typer :text='["Нарисовать Баннер","Настроить сервер" , "Разработать продукт"]'
-                          :pre-erase-delay='300' :type-delay='100' erase-style='clear' caret-animation='expand'>
-                        </vue-typer>
-                      </b></div>
+                      <typer :text='["Нарисовать Баннер","Настроить сервер" , "Разработать продукт"]'
+                             :pre-erase-delay='300' :type-delay='100' erase-style='clear' caret-animation='expand'>
+                      </typer>
+                    </b></div>
                   </div>
                   <div class="message__item  mb-3">
                     <div class="message__msg p-3 d-inline-block">Собираем команду <img class="ms-1"
-                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/thumbs-up_1f44d.png"
-                        alt="" width="22dpx"></div>
+                                                                                       src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/thumbs-up_1f44d.png"
+                                                                                       alt="" width="22dpx"></div>
                   </div>
                 </div>
                 <div class="d-grid d-md-none">
                   <a href="#"
-                    class="btn btn-header btn-primary btn-lg btn-main fs-6 fw-bold px-5 py-3">Обсудитьзадачу</a>
+                     class="btn btn-header btn-primary btn-lg btn-main fs-6 fw-bold px-5 py-3">Обсудитьзадачу</a>
                 </div>
 
               </div>
@@ -243,8 +451,8 @@
                 <div class="theam-project__item d-flex align-items-center ">
                   <div class="theam-project__image">
                     <img
-                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
-                      alt="">
+                        src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                        alt="">
                   </div>
                   <div class="theam-project__body ms-3">
                     <b class="">Александр</b>
@@ -256,8 +464,8 @@
                 <div class="theam-project__item d-flex align-items-center ">
                   <div class="theam-project__image">
                     <img
-                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
-                      alt="">
+                        src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                        alt="">
                   </div>
                   <div class="theam-project__body ms-3">
                     <b class="">Александр</b>
@@ -269,8 +477,8 @@
                 <div class="theam-project__item d-flex align-items-center ">
                   <div class="theam-project__image">
                     <img
-                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
-                      alt="">
+                        src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                        alt="">
                   </div>
                   <div class="theam-project__body ms-3">
                     <b class="">Александр</b>
@@ -282,8 +490,8 @@
                 <div class="theam-project__item d-flex align-items-center ">
                   <div class="theam-project__image">
                     <img
-                      src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
-                      alt="">
+                        src="https://lh6.googleusercontent.com/uWrm7Rb1CSlzXjwomW_qLo4mAeg-JbmQGrrIfLafA7TUMpO8giANeXDatdca6IV4mDLj4KtL99qSGxDMNDpCjJafcb1vJDBrxmQgFWjSmXvyma4hKEIlj2Oqt-anveyjUPjIQt6C"
+                        alt="">
                   </div>
                   <div class="theam-project__body ms-3">
                     <b class="">Александр</b>
@@ -394,558 +602,327 @@
   </div>
 </template>
 
-<script>
-  import BaseHeader from './components/BaseHeader.vue'
-  import Icon from '@/components/Icon/Icon'
+<style lang="postcss">
+.section-bg {
+  background: #f0f6fa;
+}
 
-  import {
-    VueTyper
-  } from 'vue-typer'
-  // import {
-  //   Swiper,
-  //   SwiperSlide
-  // } from 'swiper/vue';
-  // import 'swiper/swiper.scss';
-  export default {
-    name: 'app',
-    data() {
-      return {
-        orders: [{
-            icon: 'news',
-            name: 'Разработка UX/UI дизайна блока услуг на глав.странице и страницы услуг',
-            date: '5 мая, 8:32',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Разработать мультилендинг на WP',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Доработка сайта на опен карт 3, установка и настройка модулей',
-            date: '31 мин.',
-            badge: {
-              color: '#21C5FF',
-              text: 'Согласование'
-            }
+svg {
+  display: block;
+}
 
-          },
-          {
-            icon: 'news',
-            name: 'Создание приложения с функционалом как доставка "Самокат"',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Разработать сайт для продажи курса',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Поднять в docker MySQL и PHP',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Написать алгоритм, создающий картину в стиле стринг-арт',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          }, {
-            icon: 'news',
-            name: 'Парсинг/скрепинг продавцов с Покупки от Яндекс.Маркета',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Нужно сделать адаптив на фигме',
-            date: '31 мин.',
-            badge: {
-              color: '#21C5FF',
-              text: 'Согласование'
-            }
-
-          },
-          {
-            icon: 'news',
-            name: 'Провести первичную оптимизацию сайта',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Нужно настроить выгрузку данных из JSON по URL в Google Data Studio',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Написать архитектуру фронтенда',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Установка и настройка модулей маркет плейса интернет магазина на ОПЕН КАРТ 3',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Адаптивная верстка сайта по готовому дизайнерскому макету',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Доработать фронт на React + Typescript',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Разработать интерфейс UI/UX для e-commerce',
-            date: '31 мин.',
-            badge: {
-              color: '#21C5FF',
-              text: 'Согласование'
-            }
-
-          },
-          {
-            icon: 'news',
-            name: 'Отключить веб формы на сайте Битрикс',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Развернуть бекенд соц сети на vds сервере ubuntu',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          }, {
-            icon: 'news',
-            name: 'Доработка универсальной crud админки на quasar',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Доработка на сайте 1С.Битрикс. Поиск по штрихкоду',
-            date: '31 мин.',
-            badge: {
-              color: '#F14CAE',
-              text: 'В работе'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Создать простой оригинальный логотип',
-            date: '31 мин.',
-            badge: {
-              color: '#8CC152',
-              text: 'Готово'
-            }
-          },
-          {
-            icon: 'news',
-            name: 'Vue мобильная верстка',
-            date: '31 мин.',
-            badge: {
-              color: '#21C5FF',
-              text: 'Согласование'
-            }
-
-          }
-        ]
-      }
-    },
-    components: {
-      BaseHeader,
-      Icon,
-      VueTyper
-      // Swiper,
-      // SwiperSlide
-    }
-  };
-</script>
-
-<style lang="scss">
-  @import "@/assets/styles/global.scss";
-
-  .section-bg {
-    background: #f0f6fa;
+.theam-project {
+  &__image {
+    width: 60px;
+    height: 60px;
   }
 
-  svg {
-    display: block;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.badge {
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 100px;
+  background-color: #ff5674;
+  color: #fff;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 500;
+}
+
+.orders {
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  border-radius: 35px;
+
+  &__badge {}
+
+  &__date {
+    font-size: 14px;
+    line-height: 20px;
   }
 
-  .theam-project {
-    &__image {
-      width: 60px;
-      height: 60px;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .badge {
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 100px;
-    background-color: #ff5674;
-    color: #fff;
-    font-size: 10px;
-    line-height: 12px;
-    font-weight: 500;
-  }
-
-  .orders {
-    height: 480px;
+  &__name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
     overflow: hidden;
+    flex-grow: 1;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__wrap {
     position: relative;
     display: flex;
-    border-radius: 35px;
+    flex-grow: 1;
+    align-self: flex-start;
 
-    &__badge {}
-
-    &__date {
-      font-size: 14px;
-      line-height: 20px;
-    }
-
-    &__name {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-      overflow: hidden;
-      flex-grow: 1;
-      margin-top: 16px;
-      margin-bottom: 8px;
-      font-size: 14px;
-      line-height: 20px;
-    }
-
-    &__wrap {
-      position: relative;
-      display: flex;
-      flex-grow: 1;
-      align-self: flex-start;
-
-    }
-
-    &__icon {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      min-height: 50px;
-      border-radius: 100%;
-      background: #0056f9;
-    }
-
-    &__item {
-      margin-bottom: 20px;
-      border-radius: 25px;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      height: 235px;
-      position: relative;
-
-      @media (max-width: 991.98px) {
-        margin-bottom: 12px;
-      }
-    }
-
-    &__shadow {
-      position: absolute;
-      right: 0;
-      left: 0;
-      height: 60px;
-      z-index: 1;
-      background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, .5));
-
-      &_top {
-        top: 0;
-        transform: rotate(180deg);
-
-      }
-
-      &_bottom {
-        bottom: 0;
-      }
-    }
-
-
-    &__col {
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      transform: translateY(0);
-      width: calc((100%/3) - 20px);
-
-      animation: scroll 180s linear .4s infinite;
-
-      @media (max-width: 991.98px) {
-        width: calc((100%/2) - 6px);
-      }
-
-      &:first-child {
-        left: 0;
-      }
-
-      &:nth-of-type(2) {
-        left: calc(100%/3);
-        margin-top: -120px;
-
-        @media (max-width: 991.98px) {
-          left: calc((100%/2) + 6px);
-        }
-      }
-
-      &:last-child {
-        left: calc((100%/3) *2);
-      }
-    }
   }
 
-  .wrap {
-    box-sizing: border-box;
-    max-width: 1440px;
-    margin: 0 auto;
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    background: #0056f9;
   }
 
-  .btn-header {
+  &__item {
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 235px;
     position: relative;
 
-    &::after {
-      background: #6a9cfc;
-      content: "";
-      width: 90%;
-      height: 100%;
+    @media (max-width: 991.98px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 60px;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, .5));
+
+    &_top {
+      top: 0;
+      transform: rotate(180deg);
+
+    }
+
+    &_bottom {
       bottom: 0;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
-      z-index: -1;
-      bottom: -10px;
-      border-radius: 16px
     }
   }
 
-  .message {
-    margin-bottom: 84px;
 
-    @media (max-width: 767.98px) {
-      margin-bottom: 50px;
-    }
-
-    &__item {
-      .message__msg {
-        background: #f1f2f6;
-        border-radius: 20px 20px 20px 0;
-      }
-
-      &:nth-child(2n + 2) {
-        text-align: right;
-
-        .message__msg {
-          background: #e5eefe;
-          border-radius: 20px 20px 0px 20px;
-        }
-      }
-    }
-  }
-
-  .btn-main {
-    text-transform: uppercase;
-    border-radius: 16px;
-    letter-spacing: 0.5px;
-  }
-
-  .card {
-    background: #f1f2f6;
-
-    &__text {
-      -webkit-line-clamp: 3;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    &__name {
-      -webkit-line-clamp: 2;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-  }
-
-  .main {
-    min-height: 100vh;
-
-  }
-
-  @keyframes scroll {
-    to {
-      transform: translateY(-2590px)
-    }
-  }
-
-  @keyframes scrollX {
-    to {
-      transform: translateX(-2590px)
-    }
-  }
-
-  .work {
-    &__snippet {
-      font-size: 10px;
-    }
-
-    &__item {
-      background: #f0f6fa;
-      border-radius: 35px;
-      height: 100%;
-
-      &_height {
-        height: auto;
-      }
-
-      &_ext {
-        .work__item-name {
-          position: relative;
-
-          span {
-            position: relative;
-            z-index: 1;
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: -8px;
-            left: -4px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgb(0 86 249 / 51%);
-          }
-        }
-      }
-    }
-  }
-
-  .worker {
-    height: 58px;
+  &__col {
+    position: absolute;
+    top: 0;
+    left: 0;
     overflow: hidden;
-    position: relative;
+    transform: translateY(0);
+    width: calc((100%/3) - 20px);
 
-    &::after {
-      content: '';
-      position: absolute;
-      right: -1px;
-      bottom: 0;
-      top: 0;
-      width: 60px;
-      z-index: 1;
-      background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
-      transform: rotate(-90deg);
+    animation: scroll 180s linear .4s infinite;
+
+    @media (max-width: 991.98px) {
+      width: calc((100%/2) - 6px);
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: -1px;
-      bottom: -0;
-      top: 0;
-      width: 60px;
-      z-index: 1;
-      background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
-      transform: rotate(90deg);
+    &:first-child {
+      left: 0;
     }
 
-    &__wrap {
-      display: flex;
-      flex-grow: 1;
-      align-self: flex-start;
-      position: absolute;
-      animation: scrollX 180s linear .4s infinite;
+    &:nth-of-type(2) {
+      left: calc(100%/3);
+      margin-top: -120px;
 
+      @media (max-width: 991.98px) {
+        left: calc((100%/2) + 6px);
+      }
     }
 
-    &__item {
-      border-radius: 50%;
-      width: 58px;
-      height: 58px;
-      background: #0056f9;
-      margin-right: 20px;
+    &:last-child {
+      left: calc((100%/3) *2);
+    }
+  }
+}
 
-      &:last-child {
-        margin-right: 0;
+.wrap {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.btn-header {
+  position: relative;
+
+  &::after {
+    background: #6a9cfc;
+    content: "";
+    width: 90%;
+    height: 100%;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    bottom: -10px;
+    border-radius: 16px
+  }
+}
+
+.message {
+  margin-bottom: 84px;
+
+  @media (max-width: 767.98px) {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    .message__msg {
+      background: #f1f2f6;
+      border-radius: 20px 20px 20px 0;
+    }
+
+    &:nth-child(2n + 2) {
+      text-align: right;
+
+      .message__msg {
+        background: #e5eefe;
+        border-radius: 20px 20px 0px 20px;
       }
     }
   }
+}
+
+.btn-main {
+  text-transform: uppercase;
+  border-radius: 16px;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background: #f1f2f6;
+
+  &__text {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__name {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.main {
+  min-height: 100vh;
+
+}
+
+@keyframes scroll {
+  to {
+    transform: translateY(-2590px)
+  }
+}
+
+@keyframes scrollX {
+  to {
+    transform: translateX(-2590px)
+  }
+}
+
+.work {
+  &__snippet {
+    font-size: 10px;
+  }
+
+  &__item {
+    background: #f0f6fa;
+    border-radius: 35px;
+    height: 100%;
+
+    &_height {
+      height: auto;
+    }
+
+    &_ext {
+      .work__item-name {
+        position: relative;
+
+        span {
+          position: relative;
+          z-index: 1;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -8px;
+          left: -4px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: rgb(0 86 249 / 51%);
+        }
+      }
+    }
+  }
+}
+
+.worker {
+  height: 58px;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    bottom: 0;
+    top: 0;
+    width: 60px;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
+    transform: rotate(-90deg);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: -0;
+    top: 0;
+    width: 60px;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(240, 246, 250, 0), rgba(240, 246, 250, 0.5));
+    transform: rotate(90deg);
+  }
+
+  &__wrap {
+    display: flex;
+    flex-grow: 1;
+    align-self: flex-start;
+    position: absolute;
+    animation: scrollX 180s linear .4s infinite;
+
+  }
+
+  &__item {
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    background: #0056f9;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
 </style>
