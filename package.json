@@ -2,7 +2,7 @@
   "name": "ext.team",
   "private": true,
   "engines": {
-    "node": "22.x"
+    "node": "20.x"
   },
   "scripts": {
     "build": "nuxt build",
