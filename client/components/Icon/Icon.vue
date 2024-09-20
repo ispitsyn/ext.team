@@ -35,11 +35,13 @@ const props = defineProps({
 });
 const svg = ref(null);
 
-const svgIcon = await import(`@/components/Icon/ui/${props.name}.svg?raw`);
-svg.value = svgIcon.default.replace(
-    /^<svg /,
-    `<svg style="fill: ${props.fill}; stroke: ${props.stroke}; height:${props.height}; width:${props.width};"`
-);
+onMounted(async () => {
+  const svgIcon = await import(`@/components/Icon/ui/${props.name}.svg?raw`);
+  svg.value = svgIcon.default.replace(
+      /^<svg /,
+      `<svg style="fill: ${props.fill}; stroke: ${props.stroke}; height:${props.height}; width:${props.width};"`
+  );
+});
 </script>
 
 <template>
