@@ -1,0 +1,14 @@
+services:
+  nuxt:
+    image: node:20.17.0-alpine3.20
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+    command: sh -c "yarn && yarn run dev"
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+volumes:
+  node_modules:

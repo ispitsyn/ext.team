@@ -13,27 +13,37 @@
     "upgrade": "nuxt upgrade --force"
   },
   "devDependencies": {
-    "@csstools/postcss-global-data": "^3",
+    "vue": "^3",
+
+    "nuxt": "^3.13",
     "@nuxt/fonts": "^0",
     "@nuxt/scripts": "^0",
-    "@pinia/nuxt": "^0",
+
     "@types/node": "^20",
-    "@vuelidate/core": "^2",
-    "@vuelidate/validators": "^2",
-    "maska": "^3",
-    "nuxt": "^3.13",
-    "pinia": "^2",
+
     "postcss": "^8",
     "postcss-import": "^16",
     "postcss-nested": "^6",
     "postcss-preset-env": "^10",
-    "vue": "^3"
+    "@csstools/postcss-global-data": "^3",
+
+    "pinia": "^2",
+    "@pinia/nuxt": "^0",
+
+    "unocss": "^0",
+    "@unocss/nuxt": "^0",
+    "@unocss/postcss": "^0",
+
+    "maska": "^3",
+    "@vuelidate/core": "^2",
+    "@vuelidate/validators": "^2"
   },
   "dependencies": {
+    "nuxt-icons": "^3",
     "@vueuse/core": "^11",
     "@vueuse/nuxt": "^11",
+
     "normalize.css": "^8.0.1",
-    "nuxt-icons": "^3",
     "vue3-typer": "^1.0.0"
   },
   "browserslist": [

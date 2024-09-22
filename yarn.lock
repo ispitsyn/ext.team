@@ -1927,7 +1927,7 @@
     gzip-size "^6.0.0"
     sirv "^2.0.4"
 
-"@unocss/nuxt@^0.62.3":
+"@unocss/nuxt@^0", "@unocss/nuxt@^0.62.3":
   version "0.62.4"
   resolved "https://registry.yarnpkg.com/@unocss/nuxt/-/nuxt-0.62.4.tgz#3e202710a722399f191e852f06c7cd5bcb9b3515"
   integrity sha512-ZNfXu/f2kIRc8rnstToR/s2ubcvWDaCPmV5jXL+SQytSPb1ONCkK7ITNgB2TtrTEqQyhNX33VlnHNF8KsM8PNA==
@@ -1947,7 +1947,7 @@
     "@unocss/webpack" "0.62.4"
     unocss "0.62.4"
 
-"@unocss/postcss@0.62.4":
+"@unocss/postcss@0.62.4", "@unocss/postcss@^0":
   version "0.62.4"
   resolved "https://registry.yarnpkg.com/@unocss/postcss/-/postcss-0.62.4.tgz#003c46e958af19d8f9e8af5046e477abdc0a2a48"
   integrity sha512-kWdHy7UsSP4bDu8I7sCKeO0VuzvVpNHmn2rifK5gNstUx5dZ1H/SoyXTHx5sKtgfZBRzdNXFu2nZ3PzYGvEFbw==
@@ -6388,7 +6388,7 @@ universalify@^2.0.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.1.tgz#168efc2180964e6386d061e094df61afe239b18d"
   integrity sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==
 
-unocss@0.62.4, unocss@^0.62.3:
+unocss@0.62.4, unocss@^0, unocss@^0.62.3:
   version "0.62.4"
   resolved "https://registry.yarnpkg.com/unocss/-/unocss-0.62.4.tgz#5afc20dda5513ff23f84613f2975951682cb2a75"
   integrity sha512-SaGbxXQkk8GDPeJpWsBCZ8a23Knu4ixVTt6pvcQWKjOCGTd9XBd+vLZzN2WwdwgBPVwmMmx5wp+/gPHKFNOmIw==

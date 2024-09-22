@@ -36,7 +36,7 @@ const props = defineProps({
 const svg = ref(null);
 
 onMounted(async () => {
-  const svgIcon = await import(`@/components/Icon/ui/${props.name}.svg?raw`);
+  const svgIcon = await import(`~/components/VIcon/ui/${props.name}.svg?raw`);
   svg.value = svgIcon.default.replace(
       /^<svg /,
       `<svg style="fill: ${props.fill}; stroke: ${props.stroke}; height:${props.height}; width:${props.width};"`

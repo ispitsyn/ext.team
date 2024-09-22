@@ -48,7 +48,6 @@ export default defineNuxtConfig({
             ],
             link: [
                 {rel: 'manifest', href: '\/site.webmanifest'},
-                {href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css', rel: 'stylesheet'}
             ],
         },
         pageTransition: { name: 'page', mode: 'out-in' }
@@ -72,7 +71,8 @@ export default defineNuxtConfig({
                     'custom-media-queries': true,
                     'custom-selectors': true,
                 },
-            }
+            },
+            //'@unocss/postcss': {},
         }
     },
     components: [
@@ -88,7 +88,8 @@ export default defineNuxtConfig({
         '@nuxt/fonts',
         '@vueuse/nuxt',
         '@nuxt/devtools',
-        "@nuxt/scripts"
+        "@nuxt/scripts",
+        //'@unocss/nuxt',
     ],
     vite: {
         plugins: [],

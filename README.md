@@ -1,4 +1,4 @@
-# synergy
+# Ext Team
 
 ## Project setup
 ```
