@@ -26,12 +26,6 @@ svg {
   display: block;
 }
 
-@keyframes scroll {
-  to {
-    transform: translateY(-2590px)
-  }
-}
-
 @keyframes scrollX {
   to {
     transform: translateX(-2590px)

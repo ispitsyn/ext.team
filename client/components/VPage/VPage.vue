@@ -17,6 +17,7 @@ import VPageTopbar from "~/components/VPage/VPageTopbar.vue";
 .v-page {
   display: grid;
   grid-template-columns: repeat(12,1fr);
+  min-height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -25,6 +26,7 @@ import VPageTopbar from "~/components/VPage/VPageTopbar.vue";
   }
   &__main {
     grid-column: 3/-1;
+    padding-top: 24px;
   }
 
   &__topbar {}

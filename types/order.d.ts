@@ -2,9 +2,9 @@ interface OrderPreview {
     icon: string,
     name: string,
     date: string,
-    badge: {
+    status: {
         color: string,
-        text: string
+        name: string
     }
 }
 

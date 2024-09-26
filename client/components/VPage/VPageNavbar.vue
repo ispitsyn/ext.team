@@ -18,7 +18,6 @@ import VPageContact from "~/components/VPage/VPageContact.vue";
 
 <style lang="postcss" scoped>
 .v-page-navbar {
-  max-height: 100vh;
   display: grid;
   grid-template-columns: min-content;
   grid-template-rows: min-content auto min-content;
@@ -30,7 +29,10 @@ import VPageContact from "~/components/VPage/VPageContact.vue";
 
   &__logo {
     position: relative;
-    padding-bottom: 24px;
+    display: flex;
+    align-items: center;
+    height: 73px;
+    padding-bottom: 16px;
 
     &:after {
       position: absolute;

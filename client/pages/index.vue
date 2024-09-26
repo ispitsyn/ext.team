@@ -17,19 +17,15 @@ const { data: orders } = await useFetch<OrderPreview[]>('/api/orders');
 <template>
   <v-page-content>
     <v-section>
-      <div class="main__main my-3 my-md-5">
-        <h1 class="fs-7 d-block d-md-none h2 mb-5">IT аутсорс для малого и среднего бизнеса</h1>
+      <v-block-chat />
+    </v-section>
 
-        <v-block-chat />
-
-        <h1 class="fs-7 d-none d-md-block">IT аутсорс для малого и среднего бизнеса</h1>
-        <p class="text-secondary d-none d-md-block mb-0 fs-5 lh-base w-75">Сделаем продукт с нуля, доработаем
-          текущий проект или усилим вашу ИТ-команду лучшими разработчиками на рынке.</p>
-      </div>
+    <v-section>
+      <template #title>IT аутсорс для малого и среднего бизнеса</template>
+      <template #description>Сделаем продукт с нуля, доработаем текущий проект или усилим вашу ИТ-команду лучшими разработчиками на рынке.</template>
     </v-section>
 
     <v-section v-if="orders">
-      <template #title>Работаем без остановок</template>
       <v-block-orders :items="orders" />
     </v-section>
 
@@ -38,7 +34,7 @@ const { data: orders } = await useFetch<OrderPreview[]>('/api/orders');
       <v-block-timeline :items="timeline" />
     </v-section>
 
-    <v-section v-if="projects">
+    <v-section v-if="false && projects">
       <v-block-projects :items="projects" />
     </v-section>
   </v-page-content>
